@@ -6,19 +6,18 @@
     <title>Index</title>
 </head>
 <body>
-<div class="part1">
-  <form action="cataleg.html"></form>
+<form action="cataleg.html"></form>
     <label for="usuari">Usuari</label>
-        <input id="usuari" name="usuari" type="text" placeholder="usuari" required></input>
+        <input id="usuari" name="usuari" type="text" placeholder="usuari" required>
     <label for="contrasenya">Contrasenya</label>
-        <input id="contrasenya" name="contrasenya" type="text" placeholder="contrasenya" required></input>
-</div>
-<div class="text">
+        <input id="contrasenya" name="contrasenya" type="password" placeholder="contrasenya" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
+</form>
+<div id="text">
     <h3>La contrasenya ha de contindre</h3>
-        <p>Una lletra <b>minúscula</b></p>
-        <p>Una lletra <b>majúscula</b></p>
-        <p>Un <b>número</b></p>
-        <p>Minim<b> 8 caràcters</b></p> 
+        <p id="minuscula" class="invalid">Una lletra <b>minúscula</b></p>
+        <p id="majuscula" class="invalid">Una lletra <b>majúscula</b></p>
+        <p id="numero" class="invalid">Un <b>número</b></p>
+        <p id="llargada" class="invalid">Minim<b> 8 caràcters</b></p> 
 </div> 
 </body>
 </html>
