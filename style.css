@@ -1,0 +1,5 @@
+/*External.CSS*/
+label {font-family: Georgia; margin-top: 10px;display: flex}
+input {font-family: Georgia; margin-top: 10px;display: flex}
+option {font-family: Georgia; margin-top: 10px;display: flex}
+.text {font-family: Georgia; display: list-item;}
