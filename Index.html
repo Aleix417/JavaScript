@@ -6,11 +6,12 @@
     <title>Index</title>
 </head>
 <body>
-<form action="cataleg.html"></form>
+<form action="/cataleg.html" method="get">
     <label for="usuari">Usuari</label>
         <input id="usuari" name="usuari" type="text" placeholder="usuari" required>
     <label for="contrasenya">Contrasenya</label>
         <input id="contrasenya" name="contrasenya" type="password" placeholder="contrasenya" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
+    <button type="submit">Iniciar Sessió</button>
 </form>
 <div id="text">
     <h3>La contrasenya ha de contindre</h3>
