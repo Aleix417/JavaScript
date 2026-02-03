@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="/style.css">
     <title>Index</title>
-</head>
+  </head>
 <body>
-<form action="/cataleg.html" method="get">
-    <label for="usuari">Usuari</label>
-        <input id="usuari" name="usuari" type="text" placeholder="usuari" required>
-    <label for="contrasenya">Contrasenya</label>
-        <input id="contrasenya" name="contrasenya" type="password" placeholder="contrasenya" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
-    <button type="submit">Iniciar Sessió</button>
-</form>
+  <form action="/cataleg.html" method="get">
+      <label for="usuari">Usuari</label>
+          <input id="usuari" name="usuari" type="text" placeholder="usuari" required>
+      <label for="contrasenya">Contrasenya</label>
+          <input id="contrasenya" name="contrasenya" type="password" placeholder="contrasenya" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
+      <button type="submit">Iniciar Sessió</button>
+  </form>
 <div id="text">
     <h3>La contrasenya ha de contindre</h3>
         <p id="minuscula" class="invalid">Una lletra <b>minúscula</b></p>
@@ -21,56 +21,57 @@
         <p id="llargada" class="invalid">Minim<b> 8 caràcters</b></p> 
 </div> 
 <script>
-var myInput = document.getElementById("contrasenya");
-var minuscula = document.getElementById("minuscula");
-var majuscula = document.getElementById("majuscula");
-var numero = document.getElementById("numero");
-var llargada = document.getElementById("llargada");
+  var myInput = document.getElementById("contrasenya");
+  var minuscula = document.getElementById("minuscula");
+  var majuscula = document.getElementById("majuscula");
+  var numero = document.getElementById("numero");
+  var llargada = document.getElementById("llargada");
 
-myInput.onfocus = function() {
-  document.getElementById("text").style.display = "block";
+  myInput.onfocus = function() {
+    document.getElementById("text").style.display = "block";
 }
 
-myInput.onblur = function() {
-  document.getElementById("text").style.display = "none";
+  myInput.onblur = function() {
+    document.getElementById("text").style.display = "none";
 }
 
-myInput.onkeyup = function() {
-  var lowerCaseLetters = /[a-z]/g;
-  if(myInput.value.match(lowerCaseLetters)) {
-    minuscula.classList.remove("invalid");
-    minuscula.classList.add("valid");
+  myInput.onkeyup = function() {
+    var lowerCaseLetters = /[a-z]/g;
+    if(myInput.value.match(lowerCaseLetters)) {
+      minuscula.classList.remove("invalid");
+      minuscula.classList.add("valid");
   } else {
-    minuscula.classList.remove("valid");
-    minuscula.classList.add("invalid");
+      minuscula.classList.remove("valid");
+      minuscula.classList.add("invalid");
 }
 
-  var upperCaseLetters = /[A-Z]/g;
-  if(myInput.value.match(upperCaseLetters)) {
-    majuscula.classList.remove("invalid");
-    majuscula.classList.add("valid");
+    var upperCaseLetters = /[A-Z]/g;
+    if(myInput.value.match(upperCaseLetters)) {
+      majuscula.classList.remove("invalid");
+      majuscula.classList.add("valid");
   } else {
-    majuscula.classList.remove("valid");
-    majuscula.classList.add("invalid");
+      majuscula.classList.remove("valid");
+      majuscula.classList.add("invalid");
   }
 
-  var numbers = /[0-9]/g;
-  if(myInput.value.match(numbers)) {
-    numero.classList.remove("invalid");
-    numero.classList.add("valid");
+    var numbers = /[0-9]/g;
+
+    if(myInput.value.match(numbers)) {
+      numero.classList.remove("invalid");
+      numero.classList.add("valid");
   } else {
-    numero.classList.remove("valid");
-    numero.classList.add("invalid");
+      numero.classList.remove("valid");
+      numero.classList.add("invalid");
   }
 
-  if(myInput.value.length >= 8) {
-    llargada.classList.remove("invalid");
-    llargada.classList.add("valid");
+    if(myInput.value.length >= 8) {
+      llargada.classList.remove("invalid");
+      llargada.classList.add("valid");
   } else {
-    llargada.classList.remove("valid");
-    llargada.classList.add("invalid");
+      llargada.classList.remove("valid");
+      llargada.classList.add("invalid");
   }
 }
-</script>
-</body>
+    </script>
+  </body>
 </html>
